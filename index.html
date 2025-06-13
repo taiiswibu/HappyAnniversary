@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Anniversary 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<body>
+  <div class="falling-container" id="falling-container"></div>
+  <div class="heartbeat-left">
+    <div class="heart"></div>
+  </div>
+  <div class="heartbeat-right">
+    <div class="heart"></div>
+  </div>
+
+  <!-- Nút bật nhạc -->
+  <button id="playMusic">🎵 Bấm để bật nhạc</button>
+
+  <!-- Nhạc nền -->
+  <audio id="bgMusic" loop>
+    <source src="music/nhac.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Hiệu ứng tiêu đề -->
+  <div class="headline">Happy Anniversary 💖</div>
+  <div class="subheadline">24/06/2023 - 24/06/2025 🎉</div>
+
+  <!-- Slider ảnh -->
+  <div class="slider-container">
+    <button class="nav-button" id="prev">&#10094;</button>
+    <img id="slider" src="img/1.jpg" alt="memory">
+    <button class="nav-button" id="next">&#10095;</button>
+    <div class="love-caption" id="caption">Mỗi khoảnh khắc bên em là một phép màu 💫</div>
+  </div>
+
+  <script>
+    document.getElementById("playMusic").addEventListener("click", function () {
+      const music = document.getElementById("bgMusic");
+      music.play();
+      this.style.display = 'none'; // Ẩn nút sau khi phát
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

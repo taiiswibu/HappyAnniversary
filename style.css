@@ -1,0 +1,296 @@
+/* Toàn bộ trang */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+  text-align: center;
+  color: #c2185b;
+  overflow-x: hidden;
+  animation: fadeInBody 2s ease;
+}
+
+/* Font cho tiêu đề */
+.headline {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  color: #ff4081;
+  margin-top: 30px;
+  animation: bounceInDown 1.5s ease;
+}
+
+.subheadline {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease;
+}
+
+/* Slider container */
+.slider-container {
+  position: relative;
+  width: 90%;
+  max-width: 480px;
+  margin: 30px auto;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(255, 105, 180, 0.3);
+  animation: fadeInUp 1.2s ease;
+}
+
+/* Hình ảnh */
+#slider {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 25px;
+  object-fit: cover;
+  transition: all 0.8s ease;
+}
+
+/* Caption */
+.love-caption {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 20px;
+  color: #e91e63;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 1.2s ease;
+}
+
+/* Nút chuyển ảnh */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 105, 180, 0.8);
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 50%;
+  color: white;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+.nav-button:hover {
+  background: #f06292;
+}
+
+/* Hiệu ứng */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  60% {
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Container chứa trái tim và hoa rơi */
+.floating-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Trái tim và hoa */
+.floating-item {
+  position: absolute;
+  top: -50px;
+  font-size: 20px;
+  animation: floatDown linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+.falling-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999; /* cao hơn để hiển thị trên cùng */
+  overflow: hidden;
+}
+
+.falling-item {
+  position: absolute;
+  top: -40px;
+  color: #ff69b4;
+  font-size: 24px;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(270deg, #ffe6f0, #ffd9ec, #fbd3f5, #e0c3fc, #b5ffff);
+  background-size: 1000% 1000%;
+  animation: gradientMove 20s ease infinite;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.heart {
+  position: fixed;
+  top: -50px;
+  width: 20px;
+  height: 20px;
+  background: url('images/heart.png') no-repeat center;
+  background-size: contain;
+  animation: fall 10s linear infinite;
+  z-index: 0;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.headline {
+  font-size: 5em;
+  text-align: center;
+  margin-top: 30px;
+  animation: glow 2s ease-in-out infinite alternate;
+  font-family: 'Great Vibes', cursive;
+  color: #fff;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff85a2, 0 0 20px #ff99cc, 0 0 30px #ffccff;
+  }
+  to {
+    text-shadow: 0 0 20px #ff99cc, 0 0 30px #ffe6f0, 0 0 40px #ffffff;
+  }
+}
+
+/* Container cho 2 tim trái - phải */
+.heartbeat-left, .heartbeat-right {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  pointer-events: none;
+}
+
+.heartbeat-left {
+  left: 50px;
+}
+
+.heartbeat-right {
+  right: 50px;
+}
+
+/* Tim đập như trước */
+.heart {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 77, 109, 0.8);
+  position: relative;
+  transform: rotate(-45deg);
+  animation: heartbeat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 77, 109, 0.8);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  left: 50px;
+  top: 0;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1) rotate(-45deg); }
+  25% { transform: scale(1.1) rotate(-45deg); }
+  50% { transform: scale(1.2) rotate(-45deg); }
+  75% { transform: scale(1.1) rotate(-45deg); }
+}
